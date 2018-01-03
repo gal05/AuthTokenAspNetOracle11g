@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UsuarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="IDUSUARIO" />
+    </Key>
+    <Property Name="IDUSUARIO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DNI" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NOMBRE" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="APELLIDOS" Type="String" MaxLength="49" FixedLength="false" Unicode="false" />
+    <Property Name="DATE_CREADO" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UsuarioEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
+  </EntityContainer>
+</Schema>
