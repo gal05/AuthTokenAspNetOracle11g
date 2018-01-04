@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
@@ -15,10 +13,8 @@ namespace JsonTokenV1.Controllers
 {
     public class USUARIOSController : ApiController
     {
-        private UsuarioEntities db = new UsuarioEntities();
-
+        private UsuariosEntities db = new UsuariosEntities();
         [Authorize]
-        //[HttpGet]
         // GET: api/USUARIOS
         public IQueryable<USUARIOS> GetUSUARIOS()
         {
@@ -39,6 +35,7 @@ namespace JsonTokenV1.Controllers
         }
 
         // PUT: api/USUARIOS/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutUSUARIOS(decimal id, USUARIOS uSUARIOS)
         {
@@ -56,7 +53,9 @@ namespace JsonTokenV1.Controllers
 
             try
             {
+                List<String> alerta = new List<string> { "Modificacion Exitosa" };
                 await db.SaveChangesAsync();
+                return Ok(alerta);//nose si quedran que regrese algo :v a esperar nomas.
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -74,6 +73,7 @@ namespace JsonTokenV1.Controllers
         }
 
         // POST: api/USUARIOS
+        [Authorize]
         [ResponseType(typeof(USUARIOS))]
         public async Task<IHttpActionResult> PostUSUARIOS(USUARIOS uSUARIOS)
         {
@@ -104,6 +104,7 @@ namespace JsonTokenV1.Controllers
         }
 
         // DELETE: api/USUARIOS/5
+        [Authorize]
         [ResponseType(typeof(USUARIOS))]
         public async Task<IHttpActionResult> DeleteUSUARIOS(decimal id)
         {

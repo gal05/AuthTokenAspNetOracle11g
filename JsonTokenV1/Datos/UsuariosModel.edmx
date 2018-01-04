@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="UsuarioModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="USUARIOS">
           <Key>
             <PropertyRef Name="IDUSUARIO" />
@@ -13,16 +13,15 @@
           <Property Name="DNI" Type="number" Precision="38" Scale="0" Nullable="false" />
           <Property Name="NOMBRE" Type="varchar2" MaxLength="32" />
           <Property Name="APELLIDOS" Type="varchar2" MaxLength="49" />
-          <Property Name="DATE_CREADO" Type="date" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="UsuarioModelStoreContainer">
+        <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" Schema="MML" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="UsuarioModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="USUARIOS">
           <Key>
             <PropertyRef Name="IDUSUARIO" />
@@ -31,9 +30,8 @@
           <Property Name="DNI" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
           <Property Name="NOMBRE" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
           <Property Name="APELLIDOS" Type="String" MaxLength="49" FixedLength="false" Unicode="false" />
-          <Property Name="DATE_CREADO" Type="DateTime" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="UsuarioEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="UsuariosEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="USUARIOS" EntityType="Self.USUARIOS" />
         </EntityContainer>
       </Schema>
@@ -41,15 +39,14 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="UsuarioModelStoreContainer" CdmEntityContainer="UsuarioEntities">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="UsuariosEntities">
           <EntitySetMapping Name="USUARIOS">
-            <EntityTypeMapping TypeName="UsuarioModel.USUARIOS">
+            <EntityTypeMapping TypeName="Model.USUARIOS">
               <MappingFragment StoreEntitySet="USUARIOS">
                 <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
                 <ScalarProperty Name="DNI" ColumnName="DNI" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
                 <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
-                <ScalarProperty Name="DATE_CREADO" ColumnName="DATE_CREADO" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

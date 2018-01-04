@@ -18,6 +18,5 @@ namespace JsonTokenV1.Datos
         public decimal DNI { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDOS { get; set; }
-        public System.DateTime DATE_CREADO { get; set; }
     }
 }

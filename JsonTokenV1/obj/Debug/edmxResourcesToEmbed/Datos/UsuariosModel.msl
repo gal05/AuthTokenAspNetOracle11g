@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="UsuarioModelStoreContainer" CdmEntityContainer="UsuarioEntities">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="UsuariosEntities">
     <EntitySetMapping Name="USUARIOS">
-      <EntityTypeMapping TypeName="UsuarioModel.USUARIOS">
+      <EntityTypeMapping TypeName="Model.USUARIOS">
         <MappingFragment StoreEntitySet="USUARIOS">
           <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
           <ScalarProperty Name="DNI" ColumnName="DNI" />
           <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
           <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
-          <ScalarProperty Name="DATE_CREADO" ColumnName="DATE_CREADO" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

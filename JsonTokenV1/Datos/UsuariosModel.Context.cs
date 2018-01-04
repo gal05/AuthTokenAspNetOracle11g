@@ -13,10 +13,10 @@ namespace JsonTokenV1.Datos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UsuarioEntities : DbContext
+    public partial class UsuariosEntities : DbContext
     {
-        public UsuarioEntities()
-            : base("name=UsuarioEntities")
+        public UsuariosEntities()
+            : base("name=UsuariosEntities")
         {
         }
     
