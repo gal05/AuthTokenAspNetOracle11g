@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Deudas1Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'SISAC.DEUDASCONDUCTORES' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="DEUDASCONDUCTORES">
+    <Key>
+      <PropertyRef Name="COD_PUESTO" />
+      <PropertyRef Name="COD_PASAJE" />
+      <PropertyRef Name="COD_LETRA" />
+      <PropertyRef Name="CANO" />
+      <PropertyRef Name="PERIODO" />
+      <PropertyRef Name="COD_MERCADO" />
+      <PropertyRef Name="DOC_IDENTIDAD" />
+    </Key>
+    <Property Name="CONCEPTO" Type="char" MaxLength="17" />
+    <Property Name="DES_MERCADO" Type="varchar2" MaxLength="30" />
+    <Property Name="COD_PUESTO" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="COD_PASAJE" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="COD_LETRA" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="CANO" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="PERIODO" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="VALOR1" Type="number" Precision="12" Scale="2" />
+    <Property Name="EMISION" Type="number" Precision="12" Scale="2" />
+    <Property Name="SERVICIO" Type="number" Precision="38" Scale="0" />
+    <Property Name="MORA" Type="number" Precision="38" Scale="0" />
+    <Property Name="COD_MERCADO" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="DOC_IDENTIDAD" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="COD_NOMBRE" Type="char" MaxLength="70" />
+    <Property Name="NUM_CONTRATO" Type="char" MaxLength="5" />
+    <Property Name="ANO_CONTRATO" Type="char" MaxLength="4" />
+    <Property Name="INI_CONTRATO" Type="date" />
+    <Property Name="FIN_CONTRATO" Type="date" />
+    <Property Name="MON_CONTRATO" Type="number" Precision="12" Scale="2" />
+    <Property Name="AUTPAGO" Type="char" MaxLength="1" />
+    <Property Name="ESTADO_DEL_PUESTO" Type="varchar2" MaxLength="17" />
+  </EntityType>
+  <EntityContainer Name="Deudas1ModelStoreContainer">
+    <EntitySet Name="DEUDASCONDUCTORES" EntityType="Self.DEUDASCONDUCTORES" store:Type="Views" store:Schema="SISAC">
+      <DefiningQuery>SELECT 
+"DEUDASCONDUCTORES"."CONCEPTO" AS "CONCEPTO", 
+"DEUDASCONDUCTORES"."DES_MERCADO" AS "DES_MERCADO", 
+"DEUDASCONDUCTORES"."COD_PUESTO" AS "COD_PUESTO", 
+"DEUDASCONDUCTORES"."COD_PASAJE" AS "COD_PASAJE", 
+"DEUDASCONDUCTORES"."COD_LETRA" AS "COD_LETRA", 
+"DEUDASCONDUCTORES"."CANO" AS "CANO", 
+"DEUDASCONDUCTORES"."PERIODO" AS "PERIODO", 
+"DEUDASCONDUCTORES"."VALOR1" AS "VALOR1", 
+"DEUDASCONDUCTORES"."EMISION" AS "EMISION", 
+"DEUDASCONDUCTORES"."SERVICIO" AS "SERVICIO", 
+"DEUDASCONDUCTORES"."MORA" AS "MORA", 
+"DEUDASCONDUCTORES"."COD_MERCADO" AS "COD_MERCADO", 
+"DEUDASCONDUCTORES"."DOC_IDENTIDAD" AS "DOC_IDENTIDAD", 
+"DEUDASCONDUCTORES"."COD_NOMBRE" AS "COD_NOMBRE", 
+"DEUDASCONDUCTORES"."NUM_CONTRATO" AS "NUM_CONTRATO", 
+"DEUDASCONDUCTORES"."ANO_CONTRATO" AS "ANO_CONTRATO", 
+"DEUDASCONDUCTORES"."INI_CONTRATO" AS "INI_CONTRATO", 
+"DEUDASCONDUCTORES"."FIN_CONTRATO" AS "FIN_CONTRATO", 
+"DEUDASCONDUCTORES"."MON_CONTRATO" AS "MON_CONTRATO", 
+"DEUDASCONDUCTORES"."AUTPAGO" AS "AUTPAGO", 
+"DEUDASCONDUCTORES"."ESTADO_DEL_PUESTO" AS "ESTADO_DEL_PUESTO"
+FROM "SISAC"."DEUDASCONDUCTORES" "DEUDASCONDUCTORES"</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

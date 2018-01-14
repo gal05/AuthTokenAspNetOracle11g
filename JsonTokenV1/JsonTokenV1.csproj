@@ -254,9 +254,28 @@
     <Compile Include="AuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DataController.cs" />
+    <Compile Include="Controllers\DEUDASCONDUCTORESController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\USUARIOSController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DataMML\DEUDASCONDUCTORES.cs">
+      <DependentUpon>DeudasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataMML\DeudasModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeudasModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataMML\DeudasModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeudasModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataMML\DeudasModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DeudasModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Datos\USUARIOS.cs">
       <DependentUpon>UsuariosModel.tt</DependentUpon>
     </Compile>
@@ -291,6 +310,16 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="DataMML\DeudasModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeudasModel.edmx</DependentUpon>
+      <LastGenOutput>DeudasModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DataMML\DeudasModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DeudasModel.edmx</DependentUpon>
+      <LastGenOutput>DeudasModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Datos\UsuariosModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>UsuariosModel.edmx</DependentUpon>
@@ -336,6 +365,13 @@
     </EntityDeploy>
     <Content Include="Datos\UsuariosModel.edmx.diagram">
       <DependentUpon>UsuariosModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="DataMML\DeudasModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DeudasModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="DataMML\DeudasModel.edmx.diagram">
+      <DependentUpon>DeudasModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

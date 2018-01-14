@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Deudas1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DEUDASCONDUCTORES">
+    <Key>
+      <PropertyRef Name="COD_PUESTO" />
+      <PropertyRef Name="COD_PASAJE" />
+      <PropertyRef Name="COD_LETRA" />
+      <PropertyRef Name="CANO" />
+      <PropertyRef Name="PERIODO" />
+      <PropertyRef Name="COD_MERCADO" />
+      <PropertyRef Name="DOC_IDENTIDAD" />
+    </Key>
+    <Property Name="CONCEPTO" Type="String" MaxLength="17" FixedLength="true" Unicode="false" />
+    <Property Name="DES_MERCADO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="COD_PUESTO" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="COD_PASAJE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="COD_LETRA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="CANO" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="PERIODO" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="VALOR1" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="EMISION" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="SERVICIO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="MORA" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="COD_MERCADO" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="DOC_IDENTIDAD" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="COD_NOMBRE" Type="String" MaxLength="70" FixedLength="true" Unicode="false" />
+    <Property Name="NUM_CONTRATO" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ANO_CONTRATO" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="INI_CONTRATO" Type="DateTime" />
+    <Property Name="FIN_CONTRATO" Type="DateTime" />
+    <Property Name="MON_CONTRATO" Type="Decimal" Precision="12" Scale="2" />
+    <Property Name="AUTPAGO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ESTADO_DEL_PUESTO" Type="String" MaxLength="17" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DeudasMmlEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEUDASCONDUCTORES" EntityType="Self.DEUDASCONDUCTORES" />
+  </EntityContainer>
+</Schema>

@@ -14,7 +14,7 @@ namespace JsonTokenV1.Controllers
     public class USUARIOSController : ApiController
     {
         private UsuariosEntities db = new UsuariosEntities();
-        [Authorize]
+        [Authorize(Roles ="admin")]
         // GET: api/USUARIOS
         public IQueryable<USUARIOS> GetUSUARIOS()
         {

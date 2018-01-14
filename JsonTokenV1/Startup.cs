@@ -22,7 +22,7 @@ namespace JsonTokenV1
             {
                 AllowInsecureHttp = true,
                 TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(30),
+                AccessTokenExpireTimeSpan = TimeSpan.FromHours(1),
                 Provider = myProvider
             };
             app.UseOAuthAuthorizationServer(options);

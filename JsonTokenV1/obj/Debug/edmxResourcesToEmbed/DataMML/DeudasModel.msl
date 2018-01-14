@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Deudas1ModelStoreContainer" CdmEntityContainer="DeudasMmlEntities">
+    <EntitySetMapping Name="DEUDASCONDUCTORES">
+      <EntityTypeMapping TypeName="Deudas1Model.DEUDASCONDUCTORES">
+        <MappingFragment StoreEntitySet="DEUDASCONDUCTORES">
+          <ScalarProperty Name="CONCEPTO" ColumnName="CONCEPTO" />
+          <ScalarProperty Name="DES_MERCADO" ColumnName="DES_MERCADO" />
+          <ScalarProperty Name="COD_PUESTO" ColumnName="COD_PUESTO" />
+          <ScalarProperty Name="COD_PASAJE" ColumnName="COD_PASAJE" />
+          <ScalarProperty Name="COD_LETRA" ColumnName="COD_LETRA" />
+          <ScalarProperty Name="CANO" ColumnName="CANO" />
+          <ScalarProperty Name="PERIODO" ColumnName="PERIODO" />
+          <ScalarProperty Name="VALOR1" ColumnName="VALOR1" />
+          <ScalarProperty Name="EMISION" ColumnName="EMISION" />
+          <ScalarProperty Name="SERVICIO" ColumnName="SERVICIO" />
+          <ScalarProperty Name="MORA" ColumnName="MORA" />
+          <ScalarProperty Name="COD_MERCADO" ColumnName="COD_MERCADO" />
+          <ScalarProperty Name="DOC_IDENTIDAD" ColumnName="DOC_IDENTIDAD" />
+          <ScalarProperty Name="COD_NOMBRE" ColumnName="COD_NOMBRE" />
+          <ScalarProperty Name="NUM_CONTRATO" ColumnName="NUM_CONTRATO" />
+          <ScalarProperty Name="ANO_CONTRATO" ColumnName="ANO_CONTRATO" />
+          <ScalarProperty Name="INI_CONTRATO" ColumnName="INI_CONTRATO" />
+          <ScalarProperty Name="FIN_CONTRATO" ColumnName="FIN_CONTRATO" />
+          <ScalarProperty Name="MON_CONTRATO" ColumnName="MON_CONTRATO" />
+          <ScalarProperty Name="AUTPAGO" ColumnName="AUTPAGO" />
+          <ScalarProperty Name="ESTADO_DEL_PUESTO" ColumnName="ESTADO_DEL_PUESTO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

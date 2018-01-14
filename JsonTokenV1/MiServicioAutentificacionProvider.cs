@@ -29,7 +29,7 @@ namespace JsonTokenV1
             {
                 identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
                 identity.AddClaim(new Claim("username", "user"));
-                identity.AddClaim(new Claim(ClaimTypes.Name, "Usuario no admin"));
+                identity.AddClaim(new Claim(ClaimTypes.Name, "Usuarios"));
                 context.Validated(identity);
             }
             else
